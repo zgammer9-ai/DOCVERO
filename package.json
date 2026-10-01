@@ -1,0 +1,22 @@
+{
+  "name": "docvero",
+  "version": "1.0.0",
+  "description": "DOCVERO — Your everyday file toolkit. 100% client-side privacy-first file utilities for forms, students, and job applicants.",
+  "scripts": {
+    "build": "echo 'Static build ready'",
+    "start": "powershell -ExecutionPolicy Bypass -File server.ps1",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "file-utilities",
+    "image-compressor",
+    "signature-resizer",
+    "passport-photo",
+    "pdf-merge",
+    "jpg-to-pdf",
+    "pdf-to-jpg",
+    "client-side"
+  ],
+  "author": "DOCVERO Team",
+  "license": "MIT"
+}

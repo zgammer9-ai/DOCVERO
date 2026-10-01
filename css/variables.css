@@ -1,0 +1,243 @@
+/**
+ * DOCVERO Design Tokens & CSS Variables
+ * Light & Dark theme color system with automatic system preference detection.
+ * Philosophy: Restrained, calm, high-contrast, utility-first.
+ */
+
+:root {
+  /* Surface & Canvas Colors (Light Mode) */
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f1f5f9;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-hover: #f8fafc;
+  --bg-surface-active: #e2e8f0;
+
+  /* Brand & Primary Interactive */
+  --primary: #0c2340;           /* Official DOC deep navy */
+  --primary-hover: #071526;
+  --primary-text: #ffffff;
+  
+  --accent: #0066ff;            /* Official VERO electric blue */
+  --accent-hover: #0052cc;
+  --accent-subtle: #eff6ff;
+  --accent-text: #0052cc;
+
+  --brand-navy: #0c2340;
+  --brand-blue: #0066ff;
+  --brand-cyan: #00a8ff;
+
+  /* Typography / Text Colors */
+  --text-main: #0f172a;         /* High readability, 15:1 contrast on white */
+  --text-body: #334155;         /* Calm readable slate for descriptions */
+  --text-muted: #64748b;        /* Auxiliary details, file sizes, timestamps */
+  --text-subtle: #94a3b8;       /* Placeholders, disabled states */
+  --text-inverse: #ffffff;
+
+  /* Borders & Dividers */
+  --border-subtle: #f1f5f9;
+  --border: #e2e8f0;            /* Razor sharp, intentional borders */
+  --border-strong: #cbd5e1;
+  --border-focus: #2563eb;
+
+  /* Functional Status Colors */
+  --success: #059669;
+  --success-bg: #ecfdf5;
+  --success-border: #a7f3d0;
+  --success-text: #065f46;
+
+  --error: #dc2626;
+  --error-bg: #fef2f2;
+  --error-border: #fecaca;
+  --error-text: #991b1b;
+
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #92400e;
+
+  --badge-local-bg: #f0fdf4;
+  --badge-local-text: #166534;
+  --badge-local-border: #bbf7d0;
+
+  /* Transparency grid checkerboard */
+  --check-color: #e2e8f0;
+
+  /* Spacing System */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+
+  /* Elevation Shadows */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+
+  /* Typography Scale */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* Transition Durations */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Containers */
+  --container-max: 1200px;
+  --container-narrow: 840px;
+}
+
+/* ==========================================================================
+   Dark Theme Design Tokens
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Surfaces */
+  --bg-page: #0b0f19;
+  --bg-surface: #111827;
+  --bg-surface-subtle: #1e293b;
+  --bg-surface-elevated: #1e293b;
+  --bg-surface-hover: #1f2937;
+  --bg-surface-active: #334155;
+
+  /* Brand & Primary Interactive */
+  --primary: #f8fafc;
+  --primary-hover: #e2e8f0;
+  --primary-text: #0f172a;
+
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-subtle: rgba(59, 130, 246, 0.15);
+  --accent-text: #93c5fd;
+
+  --brand-navy: #f8fafc;
+  --brand-blue: #2f81f7;
+  --brand-cyan: #38bdf8;
+
+  /* Typography */
+  --text-main: #f8fafc;
+  --text-body: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-inverse: #0f172a;
+
+  /* Borders */
+  --border-subtle: #172033;
+  --border: #1e293b;
+  --border-strong: #334155;
+  --border-focus: #3b82f6;
+
+  /* Status Colors */
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --success-border: rgba(16, 185, 129, 0.3);
+  --success-text: #6ee7b7;
+
+  --error: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.15);
+  --error-border: rgba(239, 68, 68, 0.3);
+  --error-text: #fca5a5;
+
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.15);
+  --warning-border: rgba(245, 158, 11, 0.3);
+  --warning-text: #fcd34d;
+
+  --badge-local-bg: rgba(16, 185, 129, 0.12);
+  --badge-local-text: #6ee7b7;
+  --badge-local-border: rgba(16, 185, 129, 0.25);
+
+  --check-color: #1e293b;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+}
+
+/* System dark preference fallback if user hasn't explicitly set light mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-page: #0b0f19;
+    --bg-surface: #111827;
+    --bg-surface-subtle: #1e293b;
+    --bg-surface-elevated: #1e293b;
+    --bg-surface-hover: #1f2937;
+    --bg-surface-active: #334155;
+
+    --primary: #f8fafc;
+    --primary-hover: #e2e8f0;
+    --primary-text: #0f172a;
+
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --accent-subtle: rgba(59, 130, 246, 0.15);
+    --accent-text: #93c5fd;
+
+    --text-main: #f8fafc;
+    --text-body: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-subtle: #64748b;
+    --text-inverse: #0f172a;
+
+    --border-subtle: #172033;
+    --border: #1e293b;
+    --border-strong: #334155;
+    --border-focus: #3b82f6;
+
+    --success: #10b981;
+    --success-bg: rgba(16, 185, 129, 0.15);
+    --success-border: rgba(16, 185, 129, 0.3);
+    --success-text: #6ee7b7;
+
+    --error: #ef4444;
+    --error-bg: rgba(239, 68, 68, 0.15);
+    --error-border: rgba(239, 68, 68, 0.3);
+    --error-text: #fca5a5;
+
+    --warning: #f59e0b;
+    --warning-bg: rgba(245, 158, 11, 0.15);
+    --warning-border: rgba(245, 158, 11, 0.3);
+    --warning-text: #fcd34d;
+
+    --badge-local-bg: rgba(16, 185, 129, 0.12);
+    --badge-local-text: #6ee7b7;
+    --badge-local-border: rgba(16, 185, 129, 0.25);
+
+    --check-color: #1e293b;
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  }
+}
